@@ -172,12 +172,12 @@ void VideoPlayer::framePlayerTask()
       mJpeg.decode(0, 0, 0);
       mJpeg.close();
     }
-    // show channel indicator 
+    // show debug channel and frame FPS number
     
-      mDisplay.drawChannel(mChannelData->getChannelNumber());
+      //mDisplay.drawChannel(mChannelData->getChannelNumber());
     
     
-    mDisplay.drawFPS(frameTimes.size() / 5);
+    //mDisplay.drawFPS(frameTimes.size() / 5);
    
     mDisplay.endWrite();
   }
