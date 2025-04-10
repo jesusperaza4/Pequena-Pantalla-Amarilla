@@ -174,10 +174,10 @@ void VideoPlayer::framePlayerTask()
     }
     // show channel indicator 
     
-      //mDisplay.drawChannel(millis());
+      mDisplay.drawChannel(mChannelData->getChannelNumber());
     
     
-    //mDisplay.drawFPS(frameTimes.size() / 5);
+    mDisplay.drawFPS(frameTimes.size() / 5);
    
     mDisplay.endWrite();
   }

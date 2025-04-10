@@ -34,7 +34,7 @@ RemoteInput *remoteInput = NULL;
 #warning "No DMA - Drawing may be slower"
 #endif
 unsigned long previousMillis = 0;  // Last recorded time
-const long interval = 600000;       // 10 seconds in milliseconds
+const long interval = 600000;       // 10 Minutes in milliseconds
 int totalChannels = 0;    
 
 VideoSource *videoSource = NULL;
@@ -210,11 +210,11 @@ unsigned long currentMillis = millis();  // Get current time
 
 
 
-  // Check if 10 seconds have passed
+  // Check if 10 minutes have passed
   if (currentMillis - previousMillis >= interval) {
     
     videoPlayer->playStatic();
-    
+    delay(500);
     
     // Cycle through the channels
     channel = (channel + 1) % totalChannels;  // Increment channel and loop back to 0
